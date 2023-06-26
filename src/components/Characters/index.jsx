@@ -6,10 +6,9 @@ const Character = ({ image, id, name, status, location, event }) => {
     <div className="character-container" key={id}>
       <div
         className="character-image-container"
-        onClick={() => event(image, id, name, status)}
       >
         <img className="character-image" src={image} alt={`image of ${name}`} />
-        <p className="heart-fav">❤️</p>
+        <p  onClick={() => event(image, id, name, status)} className="heart-fav">❤️</p>
       </div>
       <p
         className={`character-status ${
